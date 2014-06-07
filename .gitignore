@@ -16,5 +16,5 @@
 /tmp
 
 # Ignore other unneeded files
-database.yml
-doc/
+/config/database.yml
+/doc/

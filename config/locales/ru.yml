@@ -1,0 +1,5 @@
+ru:
+  sessions:
+    new:
+      email: "Адрес почты"
+      password: "Пароль"

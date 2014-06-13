@@ -10,6 +10,7 @@ ru:
   email: "Адрес почты"
   password: "Пароль"
   edit: "Редактировать"
+  save: "Сохранить"
 
   users:
     index:
@@ -26,6 +27,8 @@ ru:
       name_en_placeholder: 'Name'
       locale: 'Язык'
       role: 'Роль'
+    edit:
+      heading: "Редактирование данных пользователя"
 
   activerecord:
     errors:

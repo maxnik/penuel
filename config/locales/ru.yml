@@ -1,6 +1,44 @@
 ru:
   brand: "Пенуэл"
-  sessions:
+  cancel: "Отмена"
+  locale_ru: 'Русский'
+  locale_en: 'Английский'
+  role_player: 'Игрок'
+  role_admin: 'Администратор'
+  role_coach: 'Тренер'
+  role_sponsor: 'Спонсор'
+  email: "Адрес почты"
+  password: "Пароль"
+  edit: "Редактировать"
+
+  users:
+    index:
+      heading: "Список всех пользователей"
+      new: 'Добавить нового'
     new:
-      email: "Адрес почты"
-      password: "Пароль"
+      heading: "Добавление нового пользователя"
+      add: "Добавить"
+    form:
+      email_placeholder: 'Email'
+      name_ru: 'Имя по-русски'
+      name_ru_placeholder: 'Имя'
+      name_en: 'Имя по-английски'
+      name_en_placeholder: 'Name'
+      locale: 'Язык'
+      role: 'Роль'
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Адрес почты не может быть пустым"
+              taken: "Этот адрес уже используется другим пользователем"
+              too_long: "Адрес почты слишком длинный"
+            name_ru:
+              blank: "Русское имя не может быть пустым"
+              too_long: "Русское имя слишком длинное"
+            name_en:
+              blank: "Английское имя не может быть пустым"
+              too_long: "Английское имя слишком длинное"

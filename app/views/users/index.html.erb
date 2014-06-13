@@ -1,0 +1,17 @@
+<h1><%= t('.heading') %></h1>
+
+<%= link_to t('.new'), new_user_path, class: 'btn btn-primary' %>
+
+<table class="users table table-striped">
+<% @users.each do |user| %>
+  <tr>
+    <td class="role-name col-sm-6">
+      <%= role_for(user) %>
+      <%= link_to localized_name(user), user_path(user) %>
+    </td>
+    <td class="col-sm-6">
+      <%= link_to t('edit'), edit_user_path(user), class: 'btn btn-info btn-sm' %>
+    </td>
+  </tr>
+<% end %>
+</table>

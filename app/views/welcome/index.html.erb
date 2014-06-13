@@ -1,0 +1,24 @@
+<h1><%= t('.heading') %></h1>
+
+<ul class="nav nav-pills nav-stacked">
+  <li>
+    <%= link_to raw("#{t('.users')} <span class='badge'>0</span>"), 
+                '#', class: "list-group-item" %>
+  </li>
+  <li>
+    <%= link_to raw("#{t('.expenses_donations')} <span class='badge'>0</span>"), 
+                '#', class: "list-group-item" %>
+  </li>
+  <li>
+    <%= link_to raw("#{t('.equipment')} <span class='badge'>0</span>"), 
+                '#', class: "list-group-item" %>
+  </li>
+  <li>
+    <%= link_to raw("#{t('.results')} <span class='badge'>0</span>"), 
+                '#', class: "list-group-item" %>
+  </li>
+  <li>
+    <%= link_to raw("#{t('.calendar')} <span class='badge'>0</span>"), 
+                '#', class: "list-group-item" %>
+  </li>
+</ul>

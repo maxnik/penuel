@@ -24,3 +24,12 @@ en:
   sessions:
     new:
       email: 'Email'
+
+  welcome:
+    index:
+      heading: "Management system"
+      users: "Users"
+      expenses_donations: "Expenses and donations"
+      equipment: "Equipment"
+      results: "Results"
+      calendar: "Calendar"

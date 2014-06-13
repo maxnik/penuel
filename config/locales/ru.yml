@@ -30,6 +30,15 @@ ru:
     edit:
       heading: "Редактирование данных пользователя"
 
+  welcome:
+    index:
+      heading: "Система учета"
+      users: "Пользователи"
+      expenses_donations: "Расходы и пожертвования"
+      equipment: "Оборудование"
+      results: "Статистика"
+      calendar: "Календарь"
+
   activerecord:
     errors:
       models:

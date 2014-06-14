@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  get 'login', to: 'sessions#new', as: 'login'
+  post 'sessions', to: 'sessions#create', as: 'sessions'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

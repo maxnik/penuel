@@ -9,8 +9,10 @@ ru:
   role_sponsor: 'Спонсор'
   email: "Адрес почты"
   password: "Пароль"
+  remember_me: "Запомнить меня на этом компьютере"
   edit: "Редактировать"
   save: "Сохранить"
+  logout: "Выйти"
 
   users:
     index:
@@ -29,6 +31,15 @@ ru:
       role: 'Роль'
     edit:
       heading: "Редактирование данных пользователя"
+
+  sessions:
+    new:
+      heading: "Вход / Log in"
+      must_be_logged_in: "Ввойдите для доступа / Please log in"
+    create:
+      heading: "Вход / Log in"
+      wrong_password: "Неправильный пароль / Wrong password"
+      no_user: "Неправильный адрес почты / Wrong email"
 
   welcome:
     index:

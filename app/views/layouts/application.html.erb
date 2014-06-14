@@ -22,6 +22,14 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="/"><%= t('brand') %></a>
     </div>
+    <div class="collapse navbar-collapse">
+       <% if current_user %>
+         <p class="navbar-text navbar-right">
+           <%= current_user.email %> 
+           <%= link_to t('logout'), logout_path, class: 'btn btn-default btn-xs' %>
+         </p>
+       <% end %>
+    </div>
   </nav>
 
   <div class="container">

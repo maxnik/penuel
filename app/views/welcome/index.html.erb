@@ -9,8 +9,8 @@
   <% end %>
   <% if %w(admin coach sponsor).include? current_user.role %>
     <li>
-      <%= link_to raw("#{t('.expenses_donations')} <span class='badge'>0</span>"), 
-                  '#', class: "list-group-item" %>
+      <%= link_to raw("#{t('.expenses_incomes')} <span class='badge'>#{Deal.count}</span>"), 
+                  transactions_path, class: "list-group-item" %>
     </li>
   <% end %>
   <li>

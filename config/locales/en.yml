@@ -28,12 +28,17 @@ en:
   role_admin: 'Admin'
   role_coach: 'Coach'
   role_sponsor: 'Sponsor'
+  kind_expense: "Expense"
+  kind_income: "Donation"
   email: "Email"
   password: "Password"
   remember_me: "Remember me on this computer"
   edit: "Edit"
   save: "Save"
   logout: "Log out"
+  add: "Add"
+  delete: "Delete"
+  confirm: "Are you sure?"
 
   users:
     index:
@@ -41,7 +46,6 @@ en:
       new: 'Add a new'
     new:
       heading: "Add a new user"
-      add: "Add"
     form:
       email_placeholder: 'Email'
       name_ru: 'Russian name'
@@ -63,10 +67,27 @@ en:
     index:
       heading: "Management system"
       users: "Users"
-      expenses_donations: "Expenses and donations"
+      expenses_incomes: "Expenses and donations"
       equipment: "Equipment"
       results: "Results"
       calendar: "Calendar"
+
+  deals:
+    index:
+      heading: "Expenses and donations"
+      new: "New record"
+    new:
+      heading: "New expense or donation"
+    edit:
+      heading: "Edit expense or donation"
+    form:
+      amount: "Amount"
+      amount_placeholder: "0.00"
+      kind: "Type"
+      description_ru: Russian description
+      description_en: English description
+      description_ru_placeholder: "Text"
+      description_en_placeholder: "Text"
 
   activerecord:
     errors:
@@ -83,3 +104,9 @@ en:
             name_en:
               blank: "English name can't be blank"
               too_long: "English name is too long"
+        deal:
+          attributes:
+            amount:
+              blank: "The amount can't be blank"
+            description_ru: 
+              blank: "The Russian description can't be blank"

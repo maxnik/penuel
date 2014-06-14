@@ -1,0 +1,32 @@
+<h1><%= t('.heading') %></h1>
+
+<% if %w(admin coach).include? current_user.role %>
+  <%= link_to t('.new'), new_transaction_path, class: 'btn btn-primary' %>
+<% end %>
+
+<table class="deals table">
+<% @deals.each do |deal| %>
+  <tr id="deal_<%= deal.id %>">
+    <td class="col-sm-1">
+      <%= deal.expense? ? '-' : '+' %><%= deal.amount %>
+    </td>
+    <td class="col-sm-5">
+      <%= localized_description(deal) %>
+    </td>
+    <td class="col-sm-1">
+      <%= l deal.created_at.to_date, format: :long %>
+    </td>
+    <td class="col-sm-1">
+      <%= link_to localized_name(deal.user), user_path(deal.user) %>
+    </td>
+    <td class="col-sm-2">
+      <% if current_user.admin? || deal.user_id == current_user.id %>
+        <%= link_to t('edit'), edit_transaction_path(deal), class: 'btn btn-info btn-sm' %>
+        <%= link_to t('delete'), transaction_path(deal), remote: true, method: 'delete',
+                    class: 'btn btn-danger btn-sm', 
+                    data: { confirm: t('confirm') } %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>

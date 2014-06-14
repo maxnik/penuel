@@ -31,6 +31,8 @@ class User < ActiveRecord::Base
     end while self.class.exists?(column => self[column])
   end
 
+  has_many :deals
+
   protected 
 
   def downcase_email

@@ -3,6 +3,10 @@ module ApplicationHelper
     user.public_send("name_#{I18n.locale}".to_sym)
   end
 
+  def localized_description(deal)
+    deal.public_send("description_#{I18n.locale}".to_sym)
+  end
+
   ROLE_LABELS = { player: 'default', 
                   coach: 'success', 
                   sponsor: 'warning', 

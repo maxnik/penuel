@@ -1,0 +1,34 @@
+<div class="form-group <%= form.object.errors[:amount].empty? ? '' : 'has-error' %>">
+  <%= form.label :amount, t('.amount'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-2">
+    <%= form.text_field :amount, class: 'form-control', 
+        placeholder: t('.amount_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:amount][0] %></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= form.label :kind, t('.kind'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-2">
+    <%= form.select :kind, Deal.kinds_select, {}, { class: 'form-control' } %>
+  </div>
+</div>
+
+<div class="form-group <%= form.object.errors[:description_ru].empty? ? '' : 'has-error' %>">
+  <%= form.label :description_ru, t('.description_ru'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_area :description_ru, rows: 3,
+                        placeholder: t('.description_ru_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:description_ru][0] %></span>
+  </div>
+</div>
+
+<% if current_user.admin? %>
+  <div class="form-group">
+    <%= form.label :description_en, t('.description_en'), class: 'col-sm-2 control-label' %>
+    <div class="col-sm-6">
+      <%= form.text_area :description_en, rows: 3,
+                         placeholder: t('.description_en_placeholder') %>
+    </div>
+  </div>
+<% end %>

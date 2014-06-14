@@ -7,12 +7,17 @@ ru:
   role_admin: 'Администратор'
   role_coach: 'Тренер'
   role_sponsor: 'Спонсор'
+  kind_expense: "Затрата"
+  kind_income: "Доход"
   email: "Адрес почты"
   password: "Пароль"
   remember_me: "Запомнить меня на этом компьютере"
   edit: "Редактировать"
   save: "Сохранить"
   logout: "Выйти"
+  add: "Добавить"
+  delete: "Удалить"
+  confirm: "Вы уверены?"
 
   users:
     index:
@@ -20,7 +25,6 @@ ru:
       new: 'Добавить нового'
     new:
       heading: "Добавление нового пользователя"
-      add: "Добавить"
     form:
       email_placeholder: 'Email'
       name_ru: 'Имя по-русски'
@@ -45,10 +49,27 @@ ru:
     index:
       heading: "Система учета"
       users: "Пользователи"
-      expenses_donations: "Расходы и пожертвования"
+      expenses_incomes: "Расходы и доходы"
       equipment: "Оборудование"
       results: "Статистика"
       calendar: "Календарь"
+
+  deals:
+    index:
+      heading: "Расходы и доходы"
+      new: "Новая запись"
+    new:
+      heading: "Новый расход или доход"
+    edit:
+      heading: "Редактирование расхода или дохода"
+    form:
+      amount: "Сумма"
+      amount_placeholder: "0.00"
+      kind: "Тип"
+      description_ru: Русское описание
+      description_en: Английское описание
+      description_ru_placeholder: "Текст"
+      description_en_placeholder: "Текст"
 
   activerecord:
     errors:
@@ -65,3 +86,33 @@ ru:
             name_en:
               blank: "Английское имя не может быть пустым"
               too_long: "Английское имя слишком длинное"
+        deal:
+          attributes:
+            amount:
+              blank: "Сумма не может быть пустой"
+            description_ru: 
+              blank: "Русское описание не может быть пустым"
+
+  date:
+    formats:
+      default: ! '%d.%m.%Y'
+      long: ! '%-d %B %Y'
+      short: ! '%-d %b'
+    month_names:
+    -
+    - января
+    - февраля
+    - марта
+    - апреля
+    - мая
+    - июня
+    - июля
+    - августа
+    - сентября
+    - октября
+    - ноября
+    - декабря
+    order:
+    - :day
+    - :month
+    - :year

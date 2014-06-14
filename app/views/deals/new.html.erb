@@ -1,6 +1,6 @@
 <h1><%= t('.heading') %></h1>
 
-<%= form_for @user, html: { class: 'form-horizontal' } do |f| %>
+<%= form_for @deal, url: transactions_path, html: { class: 'form-horizontal' } do |f| %>
   
   <%= render partial: 'form', object: f %>
 
@@ -9,7 +9,7 @@
       <%= button_tag t('add'), class: 'btn btn-primary'  %> 
     </div>
     <div class="col-sm-1">
-      <%= link_to t('cancel'), users_path, class: 'btn btn-warning' %>
+      <%= link_to t('cancel'), transactions_path, class: 'btn btn-warning' %>
     </div>
   </div>
 <% end %>

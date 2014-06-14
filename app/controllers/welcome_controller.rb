@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  before_action { authorize_for(nil) }
+  before_action { authorize_for }
 
   def index
   end

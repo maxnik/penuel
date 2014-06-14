@@ -1,14 +1,18 @@
 <h1><%= t('.heading') %></h1>
 
 <ul class="nav nav-pills nav-stacked">
-  <li>
-    <%= link_to raw("#{t('.users')} <span class='badge'>0</span>"), 
-                '#', class: "list-group-item" %>
-  </li>
-  <li>
-    <%= link_to raw("#{t('.expenses_donations')} <span class='badge'>0</span>"), 
-                '#', class: "list-group-item" %>
-  </li>
+  <% if current_user.admin? %>
+    <li>
+      <%= link_to raw("#{t('.users')} <span class='badge'>#{User.count}</span>"), 
+                  users_path, class: "list-group-item" %>
+    </li>
+  <% end %>
+  <% if %w(admin coach sponsor).include? current_user.role %>
+    <li>
+      <%= link_to raw("#{t('.expenses_donations')} <span class='badge'>0</span>"), 
+                  '#', class: "list-group-item" %>
+    </li>
+  <% end %>
   <li>
     <%= link_to raw("#{t('.equipment')} <span class='badge'>0</span>"), 
                 '#', class: "list-group-item" %>

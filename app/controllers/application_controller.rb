@@ -16,10 +16,16 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  def authorize
+  def authorize_for(role)
     if current_user.nil?
       flash[:alert] = I18n.t('sessions.new.must_be_logged_in')
       redirect_to login_url
+    else
+      if role.nil? || current_user.admin? || current_user.role == role
+        true
+      else
+        redirect_to root_url
+      end
     end
   end
 end

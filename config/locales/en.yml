@@ -21,13 +21,42 @@
 
 en:
   brand: "Penuel"
+  cancel: "Cancel"
+  locale_ru: 'Russian'
+  locale_en: 'English'
+  role_player: 'Player'
+  role_admin: 'Admin'
+  role_coach: 'Coach'
+  role_sponsor: 'Sponsor'
   email: "Email"
   password: "Password"
   remember_me: "Remember me on this computer"
+  edit: "Edit"
+  save: "Save"
   logout: "Log out"
+
+  users:
+    index:
+      heading: "List of all users"
+      new: 'Add a new'
+    new:
+      heading: "Add a new user"
+      add: "Add"
+    form:
+      email_placeholder: 'Email'
+      name_ru: 'Russian name'
+      name_ru_placeholder: 'Имя'
+      name_en: 'English name'
+      name_en_placeholder: 'Name'
+      locale: 'Language'
+      role: 'Role'
+    edit:
+      heading: "Edit a user info"
 
   sessions:
     new:
+      heading: "Вход / Log in"
+      must_be_logged_in: "Ввойдите для доступа / Please log in"
       email: 'Email'
 
   welcome:
@@ -38,3 +67,19 @@ en:
       equipment: "Equipment"
       results: "Results"
       calendar: "Calendar"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Email address can't be blank"
+              taken: "This address is used by another user"
+              too_long: "Email address is too long"
+            name_ru:
+              blank: "Russian name can't be blank"
+              too_long: "Russian name is too long"
+            name_en:
+              blank: "English name can't be blank"
+              too_long: "English name is too long"

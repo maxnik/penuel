@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
       flash[:alert] = I18n.t('sessions.new.must_be_logged_in')
       redirect_to login_url
     else
+      roles = [roles.to_s] unless roles.respond_to?(:to_ary)
       if roles.empty? || current_user.admin? || roles.include?(current_user.role)
         true
       else

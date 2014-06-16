@@ -1,5 +1,5 @@
 class DealsController < ApplicationController
-  before_action only: [:new, :create, :edit, :update, :destroy] { authorize_for(%w(coach)) }
+  before_action only: [:new, :create, :edit, :update, :destroy] { authorize_for(:coach) }
   before_filter only: [:index] { authorize_for(%w(coach sponsor)) }
 
   before_filter :set_deal, only: [:edit, :update, :destroy]

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action { authorize_for(%w(admin)) }
+  before_action { authorize_for(:admin) }
   before_action :set_user, only: [:edit, :update]
 
   def new

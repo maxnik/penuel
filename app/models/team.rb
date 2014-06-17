@@ -5,4 +5,7 @@ class Team < ActiveRecord::Base
   has_many :coaches, through: :coaches_teams
 
   default_scope { order('name_ru ASC') }
+
+  has_many :equipment_teams, dependent: :destroy
+  has_many :equipment, through: :equipment_teams
 end

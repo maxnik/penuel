@@ -101,6 +101,13 @@ en:
     edit: 
       heading: "Edit a team"
 
+  equipment:
+    index:
+      heading: "List of equipment"
+    form:
+      quantity: "Quantity"
+      price: "Total price"
+
   activerecord:
     errors:
       models:

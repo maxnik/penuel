@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :equipment
+
   resources :teams
 
   root 'welcome#index'

@@ -94,6 +94,18 @@ ru:
       championship_page: "Ссылка на страницу в чемпионате"
       championship_page_placeholder: "http://"
 
+  equipment:
+    index:
+      heading: "Список оборудования"
+      new: "Добавить новое"
+    new:
+      heading: "Добавление нового оборудования"
+    form:
+      quantity: "Количетво"
+      quantity_placeholder: "Число"
+      price: "Общая цена"
+      price_placeholder: "0.00"
+
   activerecord:
     errors:
       models:
@@ -121,6 +133,16 @@ ru:
               blank: "Русское название не может быть пустым"
             name_en: 
               blank: "Английское название не может быть пустым"
+        equipment:
+          attributes:
+            name_ru:
+              blank: "Русское название не может быть пустым"
+            name_en: 
+              blank: "Английское название не может быть пустым"
+            quantity:
+              blank: "Количество не может быть пустым"
+            price:
+              blank: "Цена не может быть пустой"
 
   date:
     formats:

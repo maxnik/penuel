@@ -14,8 +14,8 @@
     </li>
   <% end %>
   <li>
-    <%= link_to raw("#{t('.equipment')} <span class='badge'>0</span>"), 
-                '#', class: "list-group-item" %>
+    <%= link_to raw("#{t('.equipment')} <span class='badge'>#{Equipment.count}</span>"), 
+                equipment_index_path, class: "list-group-item" %>
   </li>
   <li>
     <%= link_to raw("#{t('.teams')} <span class='badge'>#{Team.count}</span>"), 

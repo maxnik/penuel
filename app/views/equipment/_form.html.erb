@@ -1,0 +1,59 @@
+<div class="form-group <%= form.object.errors[:name_ru].empty? ? '' : 'has-error' %>">
+  <%= form.label :name_ru, t('name_ru'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :name_ru, class: 'form-control', 
+        placeholder: t('name_ru_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:name_ru][0] %></span>
+  </div>
+</div>
+
+<div class="form-group <%= form.object.errors[:name_en].empty? ? '' : 'has-error' %>">
+  <%= form.label :name_ru, t('name_en'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :name_en, class: 'form-control', 
+        placeholder: t('name_en_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:name_en][0] %></span>
+  </div>
+</div>
+
+<div class="form-group <%= form.object.errors[:quantity].empty? ? '' : 'has-error' %>">
+  <%= form.label :quantity, t('.quantity'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :quantity, class: 'form-control', 
+        placeholder: t('.quantity_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:quantity][0] %></span>
+  </div>
+</div>
+
+<div class="form-group <%= form.object.errors[:price].empty? ? '' : 'has-error' %>">
+  <%= form.label :price, t('.price'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :price, class: 'form-control', 
+        placeholder: t('.price_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:price][0] %></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= label_tag 'teams', t('welcome.index.teams'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10">
+    <%= hidden_field_tag 'equipment[team_ids][]', nil %>
+    <% @teams.each_with_index do |team, i| %>
+      <% if (i % 3) == 0 %>
+        <div class="row">
+      <% end %>
+
+      <div class="checkbox col-sm-4">
+        <label>
+          <%= check_box_tag 'equipment[team_ids][]', team.id, 
+                            @equipment.team_ids.include?(team.id) %>
+          <%= localized_name(team) %>
+        </label>
+      </div>
+
+      <% if (i % 3) == 2 || i == (@teams.count - 1) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

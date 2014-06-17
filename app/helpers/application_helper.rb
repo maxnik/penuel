@@ -23,4 +23,8 @@ module ApplicationHelper
     " - " +
     I18n.t("brand")
   end 
+
+  def team_list_for(item)
+    raw item.teams.map { |team| link_to localized_name(team), team_path(team) }.join(', ')
+  end 
 end

@@ -1,0 +1,40 @@
+<h1><%= t('.heading') %></h1>
+
+<% if current_user.admin? %>
+  <%= link_to t('.new'), new_equipment_path, class: 'btn btn-primary' %>
+<% end %>
+
+<table class="equipment table">
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= t('equipment.form.quantity') %></th>
+      <th><%= t('equipment.form.price') %></th>
+      <th><%= t('welcome.index.teams') %></th>
+    </tr>
+  </thead>
+<% @equipment.each do |equipment| %>
+  <tr id="<%= dom_id(equipment) %>">
+    <td class="col-sm-3">
+      <%= localized_name(equipment) %>
+    </td>
+    <td class="col-sm-1">
+      <%= equipment.quantity %>
+    </td>
+    <td class="col-sm-1">
+      <%= equipment.price %>
+    </td>
+    <td class="col-sm-4">
+      <%= team_list_for(equipment) %>
+    </td>
+    <td class="col-sm-2">
+      <% if current_user.admin? %>
+        <%= link_to t('edit'), edit_equipment_path(equipment), class: 'btn btn-info btn-sm' %>
+        <%= link_to t('delete'), equipment_path(equipment), remote: true, method: 'delete',
+                    class: 'btn btn-danger btn-sm', 
+                    data: { confirm: t('confirm') } %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>

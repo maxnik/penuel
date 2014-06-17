@@ -12,6 +12,14 @@
     </td>
     <td class="col-sm-5">
       <%= localized_description(deal) %>
+      <% if current_user.admin? %>
+        <% if deal.description_en.empty? %>
+          <p class="bg-danger"><%= t('.description_en_missed') %>
+        <% else %>
+          <p class="bg-success"><%= deal.description_en %>
+        <% end %>
+          </p>
+      <% end %>
     </td>
     <td class="col-sm-1">
       <%= l deal.created_at.to_date, format: :long %>

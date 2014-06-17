@@ -8,4 +8,6 @@ class Deal < ActiveRecord::Base
   def self.kinds_select
     self.kinds.keys.map { |kind| [I18n.t("kind_#{kind}"), kind] }
   end
+
+  default_scope { order 'created_at DESC' }
 end

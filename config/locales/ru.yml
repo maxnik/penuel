@@ -20,6 +20,11 @@ ru:
   confirm: "Вы уверены?"
   coaches: "Тренеры"
 
+  name_ru: "Русское название"
+  name_en: "Английское название"
+  name_ru_placeholder: "Название"
+  name_en_placeholder: "Name"
+
   users:
     index:
       heading: "Список всех пользователей"
@@ -86,10 +91,6 @@ ru:
       heading: "Информация о команде"
       all_teams: "Все команды"
     form:
-      name_ru: "Русское название"
-      name_en: "Английское название"
-      name_ru_placeholder: "Название"
-      name_en_placeholder: "Name"
       championship_page: "Ссылка на страницу в чемпионате"
       championship_page_placeholder: "http://"
 

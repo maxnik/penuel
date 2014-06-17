@@ -1,17 +1,17 @@
 <div class="form-group <%= form.object.errors[:name_ru].empty? ? '' : 'has-error' %>">
-  <%= form.label :name_ru, t('.name_ru'), class: 'col-sm-2 control-label' %>
+  <%= form.label :name_ru, t('name_ru'), class: 'col-sm-2 control-label' %>
   <div class="col-sm-6">
     <%= form.text_field :name_ru, class: 'form-control', 
-        placeholder: t('.name_ru_placeholder') %>
+        placeholder: t('name_ru_placeholder') %>
     <span class="text-danger"><%= form.object.errors[:name_ru][0] %></span>
   </div>
 </div>
 
 <div class="form-group <%= form.object.errors[:name_en].empty? ? '' : 'has-error' %>">
-  <%= form.label :name_ru, t('.name_en'), class: 'col-sm-2 control-label' %>
+  <%= form.label :name_ru, t('name_en'), class: 'col-sm-2 control-label' %>
   <div class="col-sm-6">
     <%= form.text_field :name_en, class: 'form-control', 
-        placeholder: t('.name_en_placeholder') %>
+        placeholder: t('name_en_placeholder') %>
     <span class="text-danger"><%= form.object.errors[:name_en][0] %></span>
   </div>
 </div>

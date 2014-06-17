@@ -39,6 +39,7 @@ en:
   add: "Add"
   delete: "Delete"
   confirm: "Are you sure?"
+  coaches: "Coaches"
 
   users:
     index:
@@ -68,6 +69,7 @@ en:
       heading: "Management system"
       users: "Users"
       expenses_incomes: "Expenses and donations"
+      teams: "Teams"
       equipment: "Equipment"
       results: "Results"
       calendar: "Calendar"
@@ -88,6 +90,16 @@ en:
       description_en: English description
       description_ru_placeholder: "Text"
       description_en_placeholder: "Text"
+
+  teams:
+    index:
+      heading: "List of all teams"
+      championship: "Championship"
+    show:
+      heading: "Info about a team"
+      all_teams: "All teams"
+    edit: 
+      heading: "Edit a team"
 
   activerecord:
     errors:

@@ -18,6 +18,7 @@ ru:
   add: "Добавить"
   delete: "Удалить"
   confirm: "Вы уверены?"
+  coaches: "Тренеры"
 
   users:
     index:
@@ -50,6 +51,7 @@ ru:
       heading: "Система учета"
       users: "Пользователи"
       expenses_incomes: "Расходы и доходы"
+      teams: "Команды"
       equipment: "Оборудование"
       results: "Статистика"
       calendar: "Календарь"
@@ -70,6 +72,26 @@ ru:
       description_en: Английское описание
       description_ru_placeholder: "Текст"
       description_en_placeholder: "Текст"
+
+  teams:
+    index:
+      heading: "Список всех команд"
+      new: "Добавить новую"
+      championship_page: "Чемпионат"
+    new: 
+      heading: "Добавление новой команды"
+    edit:
+      heading: "Редактирование команды"
+    show:
+      heading: "Информация о команде"
+      all_teams: "Все команды"
+    form:
+      name_ru: "Русское название"
+      name_en: "Английское название"
+      name_ru_placeholder: "Название"
+      name_en_placeholder: "Name"
+      championship_page: "Ссылка на страницу в чемпионате"
+      championship_page_placeholder: "http://"
 
   activerecord:
     errors:
@@ -92,6 +114,12 @@ ru:
               blank: "Сумма не может быть пустой"
             description_ru: 
               blank: "Русское описание не может быть пустым"
+        team:
+          attributes:
+            name_ru: 
+              blank: "Русское название не может быть пустым"
+            name_en: 
+              blank: "Английское название не может быть пустым"
 
   date:
     formats:

@@ -6,7 +6,7 @@
 
 <table class="deals table">
 <% @deals.each do |deal| %>
-  <tr id="deal_<%= deal.id %>">
+  <tr id="<%= dom_id(deal) %>" %>">
     <td class="col-sm-1">
       <%= deal.expense? ? '-' : '+' %><%= deal.amount %>
     </td>

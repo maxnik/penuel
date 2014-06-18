@@ -32,10 +32,12 @@ class User < ActiveRecord::Base
   end
 
   has_many :deals, dependent: :nullify
-  has_many :coaches_teams, foreign_key: 'coach_id', dependent: :destroy
-  has_many :teams, through: :coaches_teams
+
+  has_many :teams_users, dependent: :destroy
+  has_many :teams, through: :teams_users
 
   scope :coaches, -> { where(role: User.roles[:coach]) }
+  scope :players, -> { where(role: User.roles[:player]) }
 
   default_scope { order('name_ru') }
 

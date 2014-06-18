@@ -1,7 +1,6 @@
 class TeamsController < ApplicationController
   before_action only: [:new, :create, :edit, :update, :destroy] { authorize_for(:admin) }
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-  before_action :load_coaches, only: [:new, :edit]
 
   def new
     @team = Team.new
@@ -12,7 +11,6 @@ class TeamsController < ApplicationController
     if @team.save
       redirect_to teams_url
     else
-      load_coaches
       render action: 'new'
     end
   end
@@ -31,7 +29,6 @@ class TeamsController < ApplicationController
     if @team.update_attributes(team_params)
       redirect_to teams_url
     else
-      load_coaches
       render action: 'edit'
     end
   end
@@ -46,14 +43,10 @@ class TeamsController < ApplicationController
   private 
 
   def team_params
-    params.require(:team).permit(:name_ru, :name_en, :championship_page, coach_ids: [])
+    params.require(:team).permit(:name_ru, :name_en, :championship_page)
   end
 
   def set_team
     @team = Team.find(params[:id])
-  end
-
-  def load_coaches
-    @coaches = User.coaches
   end
 end

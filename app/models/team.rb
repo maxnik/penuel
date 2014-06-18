@@ -1,8 +1,8 @@
 class Team < ActiveRecord::Base
   validates :name_ru, :name_en, presence: true
 
-  has_many :coaches_teams, dependent: :destroy
-  has_many :coaches, through: :coaches_teams
+  has_many :teams_users, dependent: :destroy
+  has_many :users, through: :teams_users
 
   default_scope { order('name_ru ASC') }
 

@@ -26,11 +26,11 @@
                 leagues_path, class: "list-group-item" %>
   </li>
   <li>
-    <%= link_to raw("#{t('.results')} <span class='badge'>0</span>"), 
-                '#', class: "list-group-item" %>
+    <%= link_to raw("#{t('.results')} <span class='badge'>#{Event.archived.count}</span>"), 
+                archive_events_url, class: "list-group-item" %>
   </li>
   <li>
-    <%= link_to raw("#{t('.calendar')} <span class='badge'>0</span>"), 
-                '#', class: "list-group-item" %>
+    <%= link_to raw("#{t('.calendar')} <span class='badge'>#{Event.current.count}</span>"), 
+                events_path, class: "list-group-item" %>
   </li>
 </ul>

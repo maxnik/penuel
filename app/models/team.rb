@@ -11,4 +11,7 @@ class Team < ActiveRecord::Base
 
   has_many :leagues_teams, dependent: :destroy
   has_many :leagues, through: :leagues_teams
+
+  has_many :events_teams, dependent: :destroy
+  has_many :teams, through: :events_teams
 end

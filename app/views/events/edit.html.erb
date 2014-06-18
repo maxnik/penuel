@@ -1,0 +1,15 @@
+<h1><%= t('.heading') %></h1>
+
+<%= form_for @event, html: { class: 'form-horizontal' } do |f| %>
+  
+  <%= render partial: 'form', object: f %>
+
+  <div class="form-group">
+    <div class="col-sm-1 col-sm-offset-2">
+      <%= button_tag t('save'), class: 'btn btn-primary'  %> 
+    </div>
+    <div class="col-sm-1">
+      <%= link_to t('cancel'), events_path, class: 'btn btn-warning' %>
+    </div>
+  </div>
+<% end %>

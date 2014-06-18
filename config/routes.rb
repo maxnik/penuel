@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :events do
+    get 'archive', on: :collection
+  end
+
   resources :leagues
 
   resources :equipment

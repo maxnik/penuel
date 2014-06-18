@@ -116,6 +116,22 @@ ru:
     new:
       heading: "Добавление лиги или чемпионата"
 
+  events:
+    index:
+      heading: "Календарь"
+      new: "Добавить событие"
+    archive:
+      heading: "Статистика"
+      result: "Результат"
+    new:
+      heading: "Добавление события"
+    form:
+      result_ru: "Результат на русском"
+      result_ru_placeholder: "Результат события (не обязательно)"
+      result_en: "Результат на английском"
+      result_en_placeholder: "Result"
+      when_date: "Дата события"
+
   activerecord:
     errors:
       models:
@@ -159,6 +175,10 @@ ru:
               blank: "Русское название не может быть пустым"
             name_en:
               blank: "Английское название не может быть пустым"
+        event:
+          attributes:
+            name_ru:
+              blank: "Русское название не может быть пустым"
 
   date:
     formats:

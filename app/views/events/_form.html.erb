@@ -1,0 +1,71 @@
+<div class="form-group <%= form.object.errors[:name_ru].empty? ? '' : 'has-error' %>">
+  <%= form.label :name_ru, t('name_ru'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :name_ru, class: 'form-control', 
+        placeholder: t('name_ru_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:name_ru][0] %></span>
+  </div>
+</div>
+
+<% if current_user.admin? %>
+  <div class="form-group <%= form.object.errors[:name_en].empty? ? '' : 'has-error' %>">
+    <%= form.label :name_en, t('name_en'), class: 'col-sm-2 control-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :name_en, class: 'form-control', 
+          placeholder: t('name_en_placeholder') %>
+      <span class="text-danger"><%= form.object.errors[:name_en][0] %></span>
+    </div>
+  </div>
+<% end %>
+
+<div class="form-group <%= form.object.errors[:when_date].empty? ? '' : 'has-error' %>">
+  <%= form.label :when_date, t('.when_date'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.date_select :when_date %>
+    <span class="text-danger"><%= form.object.errors[:when_date][0] %></span>
+  </div>
+</div>
+
+<div class="form-group <%= form.object.errors[:result_ru].empty? ? '' : 'has-error' %>">
+  <%= form.label :result_ru, t('.result_ru'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :result_ru, class: 'form-control', 
+        placeholder: t('.result_ru_placeholder') %>
+    <span class="text-danger"><%= form.object.errors[:result_ru][0] %></span>
+  </div>
+</div>
+
+<% if current_user.admin? %>
+  <div class="form-group <%= form.object.errors[:result_en].empty? ? '' : 'has-error' %>">
+    <%= form.label :result_en, t('.result_en'), class: 'col-sm-2 control-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :result_en, class: 'form-control', 
+          placeholder: t('.result_en_placeholder') %>
+      <span class="text-danger"><%= form.object.errors[:result_en][0] %></span>
+    </div>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <%= label_tag 'teams', t('welcome.index.teams'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10">
+    <%= hidden_field_tag 'event[team_ids][]', nil %>
+    <% @teams.each_with_index do |team, i| %>
+      <% if (i % 3) == 0 %>
+        <div class="row">
+      <% end %>
+
+      <div class="checkbox col-sm-4">
+        <label>
+          <%= check_box_tag 'event[team_ids][]', team.id, 
+                            @event.team_ids.include?(team.id) %>
+          <%= localized_name(team) %>
+        </label>
+      </div>
+
+      <% if (i % 3) == 2 || i == (@teams.count - 1) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -113,6 +113,13 @@ en:
     index:
       heading: "Leagues and championships"
 
+  events:
+    index:
+      heading: "Calendar"
+    archive:
+      heading: "Archive events"
+      result: "Result"
+
   activerecord:
     errors:
       models:

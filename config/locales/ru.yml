@@ -25,6 +25,9 @@ ru:
   name_ru_placeholder: "Название"
   name_en_placeholder: "Name"
 
+  en_missed: "Нужно сделать перевод на английский"
+
+
   users:
     index:
       heading: "Список всех пользователей"
@@ -66,7 +69,6 @@ ru:
     index:
       heading: "Расходы и доходы"
       new: "Новая запись"
-      description_en_missed: "Нужно сделать перевод на английский"
     new:
       heading: "Новый расход или доход"
     edit:

@@ -14,7 +14,7 @@
       <%= localized_description(deal) %>
       <% if current_user.admin? %>
         <% if deal.description_en.blank? %>
-          <p class="bg-danger"><%= t('.description_en_missed') %>
+          <p class="bg-danger"><%= t('en_missed') %>
         <% else %>
           <p class="bg-success"><%= deal.description_en %>
         <% end %>

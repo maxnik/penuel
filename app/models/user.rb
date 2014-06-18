@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
     end while self.class.exists?(column => self[column])
   end
 
-  has_many :deals
+  has_many :deals, dependent: :nullify
   has_many :coaches_teams, foreign_key: 'coach_id', dependent: :destroy
   has_many :teams, through: :coaches_teams
 

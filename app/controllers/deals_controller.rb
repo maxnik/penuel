@@ -26,6 +26,9 @@ class DealsController < ApplicationController
   end
 
   def update
+    if @deal.user.blank?
+      @deal.user = current_user
+    end
     if @deal.update_attributes(deal_params)
       redirect_to transactions_url
     else

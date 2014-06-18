@@ -13,7 +13,7 @@
     <td class="col-sm-5">
       <%= localized_description(deal) %>
       <% if current_user.admin? %>
-        <% if deal.description_en.empty? %>
+        <% if deal.description_en.blank? %>
           <p class="bg-danger"><%= t('.description_en_missed') %>
         <% else %>
           <p class="bg-success"><%= deal.description_en %>
@@ -25,7 +25,9 @@
       <%= l deal.created_at.to_date, format: :long %>
     </td>
     <td class="col-sm-1">
-      <%= link_to localized_name(deal.user), user_path(deal.user) %>
+      <% unless deal.user.blank? %>
+        <%= link_to localized_name(deal.user), user_path(deal.user) %>
+      <% end %>
     </td>
     <td class="col-sm-2">
       <% if current_user.admin? || deal.user_id == current_user.id %>

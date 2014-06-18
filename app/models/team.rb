@@ -8,4 +8,7 @@ class Team < ActiveRecord::Base
 
   has_many :equipment_teams, dependent: :destroy
   has_many :equipment, through: :equipment_teams
+
+  has_many :leagues_teams, dependent: :destroy
+  has_many :leagues, through: :leagues_teams
 end

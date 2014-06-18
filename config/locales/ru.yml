@@ -57,6 +57,7 @@ ru:
       users: "Пользователи"
       expenses_incomes: "Расходы и доходы"
       teams: "Команды"
+      leagues: "Лиги и чемпионаты"
       equipment: "Оборудование"
       results: "Статистика"
       calendar: "Календарь"
@@ -107,6 +108,12 @@ ru:
       price: "Общая цена"
       price_placeholder: "0.00"
 
+  leagues:
+    index:
+      heading: "Лиги и чемпионаты"
+    new:
+      heading: "Добавление лиги или чемпионата"
+
   activerecord:
     errors:
       models:
@@ -144,6 +151,12 @@ ru:
               blank: "Количество не может быть пустым"
             price:
               blank: "Цена не может быть пустой"
+        league:
+          attributes:
+            name_ru:
+              blank: "Русское название не может быть пустым"
+            name_en:
+              blank: "Английское название не может быть пустым"
 
   date:
     formats:

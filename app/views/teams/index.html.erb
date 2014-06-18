@@ -10,7 +10,7 @@
       <th></th>
       <th></th>
       <th><%= t('coaches') %></th>
-      <th>mmmmmmmmm</th>
+      <th><%= t('welcome.index.leagues') %></th>
     </tr>
   </thead>
 <% @teams.each do |team| %>
@@ -27,7 +27,7 @@
       <%= coach_list_for(team) %>
     </td>
     <td class="col-sm-3">
-      lllllll
+      <%= league_list_for(team) %>
     </td>
     <td class="col-sm-2">
       <% if current_user.admin? %>

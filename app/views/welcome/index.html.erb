@@ -22,6 +22,10 @@
                 teams_path, class: "list-group-item" %>
   </li>
   <li>
+    <%= link_to raw("#{t('.leagues')} <span class='badge'>#{League.count}</span>"), 
+                leagues_path, class: "list-group-item" %>
+  </li>
+  <li>
     <%= link_to raw("#{t('.results')} <span class='badge'>0</span>"), 
                 '#', class: "list-group-item" %>
   </li>

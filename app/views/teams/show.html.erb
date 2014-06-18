@@ -3,5 +3,13 @@
 <h2 class="text-info"><%= localized_name(@team) %></h2>
 
 <% unless @team.coaches.empty? %>
-  <%= t('coaches') %>: <%= coach_list_for(@team) %> 
+  <p>
+    <strong><%= t('coaches') %>:</strong> <%= coach_list_for(@team) %> 
+  </p>
+<% end %>
+
+<% unless @team.leagues.empty? %>
+  <p>
+    <strong><%= t('welcome.index.leagues') %>:</strong> <%= league_list_for(@team) %> 
+  </p>
 <% end %>

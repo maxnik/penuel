@@ -70,6 +70,7 @@ en:
       users: "Users"
       expenses_incomes: "Expenses and donations"
       teams: "Teams"
+      leagues: "Leagues and championships"
       equipment: "Equipment"
       results: "Results"
       calendar: "Calendar"
@@ -107,6 +108,10 @@ en:
     form:
       quantity: "Quantity"
       price: "Total price"
+
+  leagues:
+    index:
+      heading: "Leagues and championships"
 
   activerecord:
     errors:

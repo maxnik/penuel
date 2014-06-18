@@ -102,7 +102,7 @@ ru:
     new:
       heading: "Добавление нового оборудования"
     form:
-      quantity: "Количетво"
+      quantity: "Количеcтво"
       quantity_placeholder: "Число"
       price: "Общая цена"
       price_placeholder: "0.00"
